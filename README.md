@@ -14,6 +14,7 @@ El presente ejercicio busca realizar la instalación del ambiente para el desarr
   **Visualización de la interfaz de usuario.**
   
   ![Captura de Pantalla 2022-12-10 a la(s) 18 43 34](https://user-images.githubusercontent.com/104602118/206881191-594b55df-c4b0-4f14-b8f1-b62e7bbd8325.png)
+![Captura de Pantalla 2022-12-10 a la(s) 21 15 26](https://user-images.githubusercontent.com/104602118/206884625-6aac4b77-1192-4411-86f5-7d3ff6c81a47.png)
 
   **Proceso de instalación de Git y Git Bash**
   
@@ -174,3 +175,29 @@ Los HTTP headers son la parte central de los HTTP requests y responses, y transm
 A su vez, la cabecera content type indica el tipo de archivo o medio utilizado en la comunicación entre el cliente HTTP y el servidor para ayudarlos a comprender el formato en que la información está siendo enviada y, de este modo, mejorar la manera en que se procesa y se muestra el contenido.
 
 Dicho de manera más sencilla, cuando el content type se emplea en una solicitud de búsqueda, se le comunica al servidor qué tipo de archivo o medio está buscando y, aunque el servidor no necesariamente se tiene que apegar a la petición, le ayuda a encontrar los recursos correctos para retornarlos en el formato deseado.
+
+## Exercise 3
+
+Recomendamos previamente entender los conceptos de la sintaxis “json” antes de arrancar con los ejercicios.
+Descargar el POSTMAN (aplicación para realizar request como cliente), adjuntando un screen de resolución para cada ítem:
+
+1. Realizar un request GET a la URL: https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json
+![Captura de Pantalla 2022-12-10 a la(s) 21 09 39](https://user-images.githubusercontent.com/104602118/206884488-287a8553-f24f-469c-8878-bf9d464322b0.png)
+
+2.	Realizar un request POST a la URL anterior, y con body:
+~~~
+{
+"name":"Tu nombre",
+"email":tunombre.tuapellido@procontacto.com.mx
+}
+Tip: (Marcar la opción “raw” como body)
+~~~
+
+![Captura de Pantalla 2022-12-10 a la(s) 21 17 31](https://user-images.githubusercontent.com/104602118/206884667-10faed2b-c81c-4602-889c-428bfd283678.png)
+
+3.	Realizar nuevamente un request GET a la URL: https://procontacto-reclutamiento-default-rtdb.firebaseio.com/contacts.json
+¿Qué diferencias se observan entre las llamadas el punto 1 y 3?
+
+![Captura de Pantalla 2022-12-10 a la(s) 21 19 35](https://user-images.githubusercontent.com/104602118/206884712-56575bc7-fbb2-4490-9642-5d08da4bfd96.png)
+
+Haciendo el nuevo request GET a la url en cuestión se muestra ahora el name y el email ingresado en el request POST anteriormente hecho, además, se muestra adicionalmente un ID generado por la misma API.
